@@ -1,11 +1,13 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # Distributed revision control system
 brew "git"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Platform built on V8 to build network applications
 brew "node"
+# Create, run, and share large language models (LLMs)
+brew "ollama", restart_service: :changed
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Package compiler and linker metadata toolkit
@@ -13,7 +15,7 @@ brew "pkgconf"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
 # Anonymizing overlay network for TCP
-brew "tor", restart_service: true
+brew "tor", restart_service: :changed
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Vi 'workalike' with many additional features
@@ -22,36 +24,54 @@ brew "vim"
 brew "wget"
 # JavaScript package manager
 brew "yarn"
-# Create, run, and share large language models (LLMs)
-brew "ollama", restart_service: true
-
-# Applications
+# Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Memory training application
 cask "anki"
+# Chromium based browser
 cask "arc"
+# Multi-track audio editor and recorder
 cask "audacity"
+# Bitcoin client and wallet
 cask "bitcoin-core"
+# Anthropic's official Claude AI desktop app
 cask "claude"
+# Write, edit, and chat about your code with AI
 cask "cursor"
+# Voice and text chat software
 cask "discord"
+# Web browser
 cask "firefox"
+# Provides updates to various Microsoft products
 cask "microsoft-auto-update"
+# Spreadsheet software
 cask "microsoft-excel"
+# Email client
 cask "microsoft-outlook"
+# Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
+# Word processor
 cask "microsoft-word"
+# Minimal installer for conda
 cask "miniconda"
+# VPN client for secure internet access and private browsing
 cask "nordvpn"
+# App to write, plan, collaborate, and get organised
 cask "notion"
+# Command-line shell and scripting language
 cask "powershell"
+# Bitcoin wallet application
 cask "sparrow"
+# Text editor for code, markup and prose
 cask "sublime-text"
+# Messaging app with a focus on speed and security
 cask "telegram"
+# Open-source code editor
 cask "visual-studio-code"
+# Rust-based terminal
 cask "warp"
+# Video communication and virtual meeting platform
 cask "zoom"
-
-# VS Code Extensions
 vscode "ankitbko.vscode-pull-request-azdo"
 vscode "astro-build.astro-vscode"
 vscode "bbenoist.nix"
@@ -95,7 +115,7 @@ vscode "ms-python.vscode-pylance"
 vscode "ms-toolsai.jupyter"
 vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
-vscode "ms-toolsai.jupyter-slideshow"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode.azure-account"
 vscode "ms-vscode.azure-repos"
